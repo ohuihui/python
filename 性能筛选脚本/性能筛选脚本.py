@@ -1,0 +1,24 @@
+'''性能筛选脚本'''
+
+File_input = '20171212VoLTE网元性能.txt'
+File_output = '20171212工程网元性能'
+List_keywords = ['HZVOLTEAS04', 'HZSCCAS04', 'HZVOLTEAS09',
+                 'HZSCCAS09', 'HZISBG09', 'HZISBG12', 'HZPSBC13', 'HZPSBC14']
+
+
+def __main():
+    Fin = open(File_input, 'r')
+    fout = open(File_output, 'w')
+    for line in Fin:
+        if line[0].isalpha() or line[0] == '-':
+            fout.write(line)
+        else:
+            for keyword in List_keywords:
+                if keyword in line:
+                    fout.write(line)
+    Fin.close(), fout.close()
+    print('Job is done.')
+
+
+if __name__ == '__main__':
+    __main()
