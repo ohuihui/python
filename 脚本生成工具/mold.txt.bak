@@ -1,0 +1,6 @@
+
+MOD VOLTETAG: ISDN="86\1", \4VOLTETAG=TRUE\5;
+MOD STNSR: ISDN="86\1", PROV=TRUE, STNSR="8613741682";
+MOD EPSSER: ISDN="86\1", PROV=ADDPDNCNTX, CNTXID=5, EPSAPNQOSTPLID=5;
+ADD IMSSUB: ISDN="86\1", IMPI="\2@ims.mnc00\3.mcc460.3gppnetwork.org", IMPULIST="\"tel:+86\1\"&\"sip:+86\1@zj.ims.mnc000.mcc460.3gppnetwork.org\"&\"sip:\2@ims.mnc002.mcc460.3gppnetwork.org\"", BARIMPULIST="\"sip:\2@ims.mnc002.mcc460.3gppnetwork.org\"",VOLTETAG=TRUE, MCAP="1101", OCAP="3&4", VNTPLID=3,SIFCLIST="5&912";
+MOD TCSI: ISDN="86\1", PROV=TRUE, TPLID=210;
