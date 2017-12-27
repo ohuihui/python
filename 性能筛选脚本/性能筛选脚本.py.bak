@@ -3,7 +3,7 @@
 File_input = '20171212VoLTE网元性能.txt'
 File_output = '20171212PSBC工程网元性能.txt'
 List_keywords = [
-                 #'HZVOLTEAS04', 'HZSCCAS04', 'HZVOLTEAS09','HZSCCAS09', 
+                 'HZVOLTEAS04', 'HZSCCAS04', 'HZVOLTEAS09','HZSCCAS09', 
                  #'HZISBG09', 'HZISBG12', 
                  'HZPSBC13', 'HZPSBC14'
                  ] 	
