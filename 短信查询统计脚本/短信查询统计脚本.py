@@ -16,7 +16,7 @@ Cmd_count = r'''SELECT count(1) as a
 
 sendSMSCommandPatten = r'''insert into [cmpp].[dbo].CmMETONEMTINFO (mobile,smscontent,smsport,isinqueue,userorder,sendtime,registered)
                     values ('{num}','{content}','1065858499',0,0,getdate(),1);'''
-listDesNum = ['13868139011' #, '13858115116', '13806510651', '13777456086', '13958053500'
+listDesNum = ['13868139011'#, '13858115116', '13806510651', '13777456086', '13958053500'
               ]  # 放入需要发送短信的联系人
 
 threshold = 20
@@ -48,7 +48,7 @@ def __main():
                     num=desNum, content=str_result)
             else:
                 sendsmsCommand = sendSMSCommandPatten.format(
-                    num='13868139011', content='本周华为短信接口用户查询次数统计：\r\n本周共完成查询' + str(count) + '次\r\n本周无查询大于' + str(threshold) + '次及以上用户')
+                    num=desNum, content='本周华为短信接口用户查询次数统计：\r\n本周共完成查询' + str(count) + '次\r\n本周无查询大于' + str(threshold) + '次及以上用户')
             cur.execute(sendsmsCommand)
             cur.commit()
 
