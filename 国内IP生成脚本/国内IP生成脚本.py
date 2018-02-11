@@ -10,8 +10,9 @@ def __main():
     filtered_lines = [line.split('|')
                       for line in f_input if('CN|ipv4' in line)]
     for line in filtered_lines:
-        ip = 'address ' + line[3] + ' mask ' + \
-            str(32 - int(math.log2(int(line[4]))))
+        #ip = 'address ' + line[3] + ' mask ' + \
+        #    str(32 - int(math.log2(int(line[4]))))
+        ip = line[3]
         f_output.write(ip + '\n')
         print(ip + '\n')
 
